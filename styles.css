@@ -11,6 +11,16 @@ body {
   background-color: #cfe8d5;
   animation: fadeIn 1s;
 }
+  .character-sections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+@media (max-width: 768px) {
+  .character-sections {
+    flex-direction: column;
+  }
+}
 
 
 header {
@@ -83,7 +93,22 @@ main {
 }
 
 
+table {
+border-collapse: collapse;
+width: 100%;
+margin: 20px 0;
+border: 2px solid #333;
+}
 
+table th, table td {
+padding: 10px;
+border: 1px solid #ccc;
+}
+
+table th {
+background-color: #333;
+color: #fff;
+}
 .character-grid a {
   display: flex;
   justify-content: center;
@@ -104,7 +129,7 @@ main {
   .character-grid a {
     width: 60px;
     height: 60px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -112,7 +137,7 @@ main {
   .character-grid a {
     width: 50px;
     height: 50px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 
