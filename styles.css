@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 @media (max-width: 768px) {
   .character-sections {
