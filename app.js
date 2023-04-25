@@ -6,7 +6,8 @@ const buttons = document.querySelectorAll("a[data-char]");
 
 // loop through each button and add an event listener
 buttons.forEach(button => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
     const soundUrl = `audio/${button.dataset.char}.mp3`;
 
     // create a new Audio object and load the sound file
