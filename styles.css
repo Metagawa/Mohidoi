@@ -14,6 +14,7 @@ body {
   .character-sections {
     display: flex;
     justify-content: center;
+      align-items: center; 
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -92,6 +93,7 @@ main {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  width: 25%; /* set each table cell to occupy 25% of the table width */
 }
 
 .character-grid a {
@@ -141,8 +143,8 @@ color: #fff;
 
 @media screen and (max-width: 480px) {
   .character-grid a {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     font-size: 1rem;
   }
 }
