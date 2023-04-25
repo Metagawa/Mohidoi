@@ -17,8 +17,8 @@ body {
     flex-wrap: wrap;
   }
 @media (max-width: 768px) {
-  .character-sections {
-    flex-direction: column;
+  .character-grid {
+    max-width: 90%;
   }
 }
 
