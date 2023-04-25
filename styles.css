@@ -18,7 +18,7 @@ body {
   }
 @media (max-width: 768px) {
   .character-grid {
-    max-width: 90%;
+    max-width: 75%;
   }
 }
 
