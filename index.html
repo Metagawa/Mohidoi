@@ -1,223 +1,237 @@
 <!DOCTYPE html>
 <html lang="ja-jp">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Mohidoi</title>
-  </head>
-  <body>
-    <header>
-      <a href="#" class="logo">
-        <img src="images/mojito-icon.png" alt="Mohidoi" />
-      </a>
-      <h1>
-        Mohidoi - A ひどい Hiragana & Katakana Learning Tool
-      </h1>
-      <nav>
-        <a href="#hiragana">Hiragana</a>
-        <a href="#katakana">Katakana</a>
-      </nav>
-    </header>
-    <main>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles.css" />
+      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+      <link rel="icon" href="favicon.ico" type="image/x-icon" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap"
+         rel="stylesheet"
+         />
+      <title>Mohidoi</title>
+   </head>
+   <body>
+      <header>
+         <a href="#" class="logo">
+         <img src="images/mojito-icon.png" alt="Mohidoi" />
+         </a>
+         <h1>
+            Mohido</h1><br><h2> - A ひどい Hiragana & Katakana Learning Tool
+         </h2>
+         <nav>
+            <a href="#hiragana">Hiragana</a>
+            <a href="#katakana">Katakana</a>
+         </nav>
+      </header>
+      <main>
          <section id="hiragana">
-            <h2>Hiragana</h2>
-            <div class="character-grid">
-               <a data-char="a">あ</a>
-               <a data-char="i">い</a>
-               <a data-char="u">う</a>
-               <a data-char="e">え</a>
-               <a data-char="o">お</a>
-               <a data-char="ka">か</a>
-               <a data-char="ki">き</a>
-               <a data-char="ku">く</a>
-               <a data-char="ke">け</a>
-               <a data-char="ko">こ</a>
-               <a data-char="sa">さ</a>
-               <a data-char="shi">し</a>
-               <a data-char="su">す</a>
-               <a data-char="se">せ</a>
-               <a data-char="so">そ</a>
-               <a data-char="ta">た</a>
-               <a data-char="chi">ち</a>
-               <a data-char="tsu">つ</a>
-               <a data-char="te">て</a>
-               <a data-char="to">と</a>
-               <a data-char="na">な</a>
-               <a data-char="ni">に</a>
-               <a data-char="nu">ぬ</a>
-               <a data-char="ne">ね</a>
-               <a data-char="no">の</a>
-               <a data-char="ha">は</a>
-               <a data-char="hi">ひ</a>
-               <a data-char="fu">ふ</a>
-               <a data-char="he">へ</a>
-               <a data-char="ho">ほ</a>
-               <a data-char="ma">ま</a>
-               <a data-char="mi">み</a>
-               <a data-char="mu">む</a>
-               <a data-char="me">め</a>
-               <a data-char="mo">も</a>
-               <a data-char="ya">や</a>
-               <a data-char=""></a>
-               <a data-char="yu">ゆ</a>
-               <a data-char=""></a>
-               <a data-char="yo">よ</a>
-               <a data-char="ra">ら</a>
-               <a data-char="ri">り</a>
-               <a data-char="ru">る</a>
-               <a data-char="re">れ</a>
-               <a data-char="ro">ろ</a>
-               <a data-char="wa">わ</a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char="wo">を</a>
-               <a data-char="n">ん</a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-            </div>
-         </section>
-         <section id="dakuon">
-            <h3>Dakuon</h3>
-            <div class="character-grid">
-               <a data-char="ga">が</a>
-               <a data-char="gi">ぎ</a>
-               <a data-char="gu">ぐ</a>
-               <a data-char="ge">げ</a>
-               <a data-char="go">ご</a>
-               <a data-char="za">ざ</a>
-               <a data-char="ji">じ</a>
-               <a data-char="zu">ず</a>
-               <a data-char="ze">ぜ</a>
-               <a data-char="zo">ぞ</a>
-               <a data-char="da">だ</a>
-               <a data-char="ji">ぢ</a>
-               <a data-char="zu">づ</a>
-               <a data-char="de">で</a>
-               <a data-char="do">ど</a>
-               <a data-char="ba">ば</a>
-               <a data-char="bi">び</a>
-               <a data-char="bu">ぶ</a>
-               <a data-char="be">べ</a>
-               <a data-char="bo">ぼ</a>
-               <a data-char="pa">ぱ</a>
-               <a data-char="pi">ぴ</a>
-               <a data-char="pu">ぷ</a>
-               <a data-char="pe">ぺ</a>
-               <a data-char="po">ぽ</a>
-            </div>
-         </section>
-         <section id="handakuon">
-            <h3>Handakuon</h3>
-            <div class="character-grid">
-               <a data-char="kya">きゃ</a>
-               <a data-char="kyu">きゅ</a>
-               <a data-char="kyo">きょ</a>
-               <a data-char="sha">しゃ</a>
-               <a data-char="shu">しゅ</a>
-               <a data-char="sho">しょ</a>
-               <a data-char="cha">ちゃ</a>
-               <a data-char="chu">ちゅ</a>
-               <a data-char="cho">ちょ</a>
-               <a data-char="nya">にゃ</a>
-               <a data-char="nyu">にゅ</a>
-               <a data-char="nyo">にょ</a>
-               <a data-char="hya">ひゃ</a>
-               <a data-char="hyu">ひゅ</a>
-               <a data-char="hyo">ひょ</a>
-               <a data-char="mya">みゃ</a>
-               <a data-char="myu">みゅ</a>
-               <a data-char="myo">みょ</a>
-               <a data-char="rya">りゃ</a>
-               <a data-char="ryu">りゅ</a>
-               <a data-char="ryo">りょ</a>
-               <a data-char="gya">ぎゃ</a>
-               <a data-char="gyu">ぎゅ</a>
-               <a data-char="gyo">ぎょ</a>
-               <a data-char="ja">じゃ</a>
-               <a data-char="ju">じゅ</a>
-               <a data-char="jo">じょ</a>
-               <a data-char="bya">びゃ</a>
-               <a data-char="byu">びゅ</a>
-               <a data-char="byo">びょ</a>
-               <a data-char="pya">ぴゃ</a>
-               <a data-char="pyu">ぴゅ</a>
-               <a data-char="pyo">ぴょ</a>
-            </div>
+            <h2 style="text-align: center;">Hiragana</h2>
+            <table class="character-grid">
+               <thead>
+                  <tr>
+                     <th></th>
+                     <th>A</th>
+                     <th>I</th>
+                     <th>U</th>
+                     <th>E</th>
+                     <th>O</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td></td>
+                     <td><a data-char="a">あ</a></td>
+                     <td><a data-char="i">い</a></td>
+                     <td><a data-char="u">う</a></td>
+                     <td><a data-char="e">え</a></td>
+                     <td><a data-char="o">お</a></td>
+                  </tr>
+                  <tr>
+                     <td>K</td>
+                     <td><a data-char="ka">か</a></td>
+                     <td><a data-char="ki">き</a></td>
+                     <td><a data-char="ku">く</a></td>
+                     <td><a data-char="ke">け</a></td>
+                     <td><a data-char="ko">こ</a></td>
+                  </tr>
+                  <tr>
+                     <td>S</td>
+                     <td><a data-char="sa">さ</a></td>
+                     <td><a data-char="shi">し</a></td>
+                     <td><a data-char="su">す</a></td>
+                     <td><a data-char="se">せ</a></td>
+                     <td><a data-char="so">そ</a></td>
+                  </tr>
+                  <tr>
+                     <td>T</td>
+                     <td><a data-char="ta">た</a></td>
+                     <td><a data-char="chi">ち</a></td>
+                     <td><a data-char="tsu">つ</a></td>
+                     <td><a data-char="te">て</a></td>
+                     <td><a data-char="to">と</a></td>
+                  </tr>
+                  <tr>
+                     <td>N</td>
+                     <td><a data-char="na">な</a></td>
+                     <td><a data-char="ni">に</a></td>
+                     <td><a data-char="nu">ぬ</a></td>
+                     <td><a data-char="ne">ね</a></td>
+                     <td><a data-char="no">の</a></td>
+                  </tr>
+                  <tr>
+                     <td>H</td>
+                     <td><a data-char="ha">は</a></td>
+                     <td><a data-char="hi">ひ</a></td>
+                     <td><a data-char="fu">ふ</a></td>
+                     <td><a data-char="he">へ</a></td>
+                     <td><a data-char="ho">ほ</a></td>
+                  </tr>
+                  <tr>
+                     <td>M</td>
+                     <td><a data-char="ma">ま</a></td>
+                     <td><a data-char="mi">み</a></td>
+                     <td><a data-char="mu">む</a></td>
+                     <td><a data-char="me">め</a></td>
+                     <td><a data-char="mo">も</a></td>
+                  </tr>
+                  <tr>
+                     <td>Y</td>
+                     <td><a data-char="ya">や</a></td>
+                     <td></td>
+                     <td><a data-char="yu">ゆ</a></td>
+                     <td></td>
+                     <td><a data-char="yo">よ</a></td>
+                  </tr>
+                  <tr>
+                     <td>R</td>
+                     <td><a data-char="ra">ら</a></td>
+                     <td><a data-char="ri">り</a></td>
+                     <td><a data-char="ru">る</a></td>
+                     <td><a data-char="re">れ</a></td>
+                     <td><a data-char="ro">ろ</a></td>
+                  </tr>
+                  <tr>
+                     <td>W</td>
+                     <td><a data-char="wa">わ</a></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td><a data-char="wo">を</a></td>
+                  </tr>
+                  <tr>
+                     <td>🌟</td>
+                     <td colspan="5"><a data-char="n">ん</a></td>
+                  </tr>
+               </tbody>
+            </table>
          </section>
          <section id="katakana">
-            <h2>Katakana</h2>
-            <div class="character-grid">
-               <a data-char="a">ア</a>
-               <a data-char="i">イ</a>
-               <a data-char="u">ウ</a>
-               <a data-char="e">エ</a>
-               <a data-char="o">オ</a>
-               <a data-char="ka">カ</a>
-               <a data-char="ki">キ</a>
-               <a data-char="ku">ク</a>
-               <a data-char="ke">ケ</a>
-               <a data-char="ko">コ</a>
-               <a data-char="sa">サ</a>
-               <a data-char="shi">シ</a>
-               <a data-char="su">ス</a>
-               <a data-char="se">セ</a>
-               <a data-char="so">ソ</a>
-               <a data-char="ta">タ</a>
-               <a data-char="chi">チ</a>
-               <a data-char="tsu">ツ</a>
-               <a data-char="te">テ</a>
-               <a data-char="to">ト</a>
-               <a data-char="na">ナ</a>
-               <a data-char="ni">ニ</a>
-               <a data-char="nu">ヌ</a>
-               <a data-char="ne">ネ</a>
-               <a data-char="no">ノ</a>
-               <a data-char="ha">ハ</a>
-               <a data-char="hi">ヒ</a>
-               <a data-char="fu">フ</a>
-               <a data-char="he">ヘ</a>
-               <a data-char="ho">ホ</a>
-               <a data-char="ma">マ</a>
-               <a data-char="mi">ミ</a>
-               <a data-char="mu">ム</a>
-               <a data-char="me">メ</a>
-               <a data-char="mo">モ</a>
-               <a data-char="ya">ヤ</a>
-               <a data-char=""></a>
-               <a data-char="yu">ユ</a>
-               <a data-char=""></a>
-               <a data-char="yo">ヨ</a>
-               <a data-char="ra">ラ</a>
-               <a data-char="ri">リ</a>
-               <a data-char="ru">ル</a>
-               <a data-char="re">レ</a>
-               <a data-char="ro">ロ</a>
-               <a data-char="wa">ワ</a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char="wo">ヲ</a>
-               <a data-char="n">ン</a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-               <a data-char=""></a>
-                        </div>
+            <h2 style="text-align: center;">Katakana</h2>
+            <table class="character-grid">
+               <thead>
+                  <tr>
+                     <th></th>
+                     <th>A</th>
+                     <th>I</th>
+                     <th>U</th>
+                     <th>E</th>
+                     <th>O</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td></td>
+                     <td><a data-char="a">ア</a></td>
+                     <td><a data-char="i">イ</a></td>
+                     <td><a data-char="u">ウ</a></td>
+                     <td><a data-char="e">エ</a></td>
+                     <td><a data-char="o">オ</a></td>
+                  </tr>
+                  <tr>
+                     <td>K</td>
+                     <td><a data-char="ka">カ</a></td>
+                     <td><a data-char="ki">キ</a></td>
+                     <td><a data-char="ku">ク</a></td>
+                     <td><a data-char="ke">ケ</a></td>
+                     <td><a data-char="ko">コ</a></td>
+                  </tr>
+                  <tr>
+                     <td>S</td>
+                     <td><a data-char="sa">サ</a></td>
+                     <td><a data-char="shi">シ</a></td>
+                     <td><a data-char="su">ス</a></td>
+                     <td><a data-char="se">セ</a></td>
+                     <td><a data-char="so">ソ</a></td>
+                  </tr>
+                  <tr>
+                     <td>T</td>
+                     <td><a data-char="ta">タ</a></td>
+                     <td><a data-char="chi">チ</a></td>
+                     <td><a data-char="tsu">ツ</a></td>
+                     <td><a data-char="te">テ</a></td>
+                     <td><a data-char="to">ト</a></td>
+                  </tr>
+                  <tr>
+                     <td>N</td>
+                     <td><a data-char="na">ナ</a></td>
+                     <td><a data-char="ni">ニ</a></td>
+                     <td><a data-char="nu">ヌ</a></td>
+                     <td><a data-char="ne">ネ</a></td>
+                     <td><a data-char="no">ノ</a></td>
+                  </tr>
+                  <tr>
+                     <td>H</td>
+                     <td><a data-char="ha">ハ</a></td>
+                     <td><a data-char="hi">ヒ</a></td>
+                     <td><a data-char="fu">フ</a></td>
+                     <td><a data-char="he">ヘ</a></td>
+                     <td><a data-char="ho">ホ</a></td>
+                  </tr>
+                  <tr>
+                     <td>M</td>
+                     <td><a data-char="ma">マ</a></td>
+                     <td><a data-char="mi">ミ</a></td>
+                     <td><a data-char="mu">ム</a></td>
+                     <td><a data-char="me">メ</a></td>
+                     <td><a data-char="mo">モ</a></td>
+                  </tr>
+                  <tr>
+                     <td>Y</td>
+                     <td><a data-char="ya">ヤ</a></td>
+                     <td></td>
+                     <td><a data-char="yu">ユ</a></td>
+                     <td></td>
+                     <td><a data-char="yo">ヨ</a></td>
+                  </tr>
+                  <tr>
+                     <td>R</td>
+                     <td><a data-char="ra">ラ</a></td>
+                     <td><a data-char="ri">リ</a></td>
+                     <td><a data-char="ru">ル</a></td>
+                     <td><a data-char="re">レ</a></td>
+                     <td><a data-char="ro">ロ</a></td>
+                  </tr>
+                  <tr>
+                     <td>W</td>
+                     <td><a data-char="wa">ワ</a></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td><a data-char="wo">ヲ</a></td>
+                  </tr>
+                  <tr>
+                     <td>N</td>
+                     <td colspan="5"><a data-char="n">ン</a></td>
+                  </tr>
+               </tbody>
+            </table>
          </section>
-    </main>
-    <footer>
-      <p>&copy; Mohidoi 2023. All Rights Reserved.</p>
-    </footer>
-    <script src="app.js"></script>
-  </body>
+      </main>
+      <footer>
+         <p>&copy; Tom Carey 2023. All Rights Reserved.</p>
+      </footer>
+      <script src="app.js"></script>
+   </body>
 </html>
