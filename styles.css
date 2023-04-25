@@ -17,10 +17,15 @@ body {
     flex-wrap: wrap;
   }
 @media (max-width: 768px) {
+  .character-sections {
+    flex-direction: column;
+    text-align: center;
+  }
   .character-grid {
-    max-width: 75%;
+    margin: 0 auto;
   }
 }
+
 
 
 header {
