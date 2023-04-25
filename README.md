@@ -1,2 +1,4 @@
 # [Mohidoi](https://mohidoi.com/)
-Hiragana and Katakana learning tool
+A terrible Hiragana and Katakana learning site.
+
+![Example Image](./repo/example.png)
