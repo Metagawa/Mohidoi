@@ -59,10 +59,10 @@ if (button.textContent.includes(emoji)) {
       // slow down the speech if the same button was clicked twice in a row
       if (lastButton && lastButton.dataset.char === button.dataset.char) {
         if (triggered) {
-          utterance.rate = 0.75;
+          utterance.rate = 1;
           triggered = false;
         } else {
-          utterance.rate = 0.25;
+          utterance.rate = 0.5;
           triggered = true;
         }
       }
@@ -88,11 +88,8 @@ if (button.textContent.includes(emoji)) {
                   logo.style.fontSize = "4rem";
 
 document.querySelector('link[rel="icon"]').setAttribute("href", "images/moojito-icon.png");
-document.title = "Moohidoi";
-
+        document.title = "Moohidoi";
       }
-    } else {
-      muCount = 0;
     }
 
     // create a new div element for the popup
