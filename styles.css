@@ -215,3 +215,24 @@ to {
 opacity: 1;
 }
 }
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #00a7ff;
+}
+
+.progress-bar-animation {
+  animation: shrink 2s linear forwards;
+}
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}

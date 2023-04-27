@@ -4,18 +4,23 @@ const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 // get all anchor elements with the data-char attribute
 const buttons = document.querySelectorAll("a[data-char]");
 
+// check if the browser supports speech synthesis
+const speechSynthesisSupported = 'speechSynthesis' in window;
+
 // loop through each button and add an event listener
 buttons.forEach(button => {
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    const soundUrl = `audio/${button.dataset.char}.mp3`;
 
-    // create a new Audio object and load the sound file
-    const sound = new Audio(soundUrl);
-    sound.load();
-
-    // play the sound
-    sound.play();
+    if (speechSynthesisSupported) {
+      speechSynthesis.cancel();
+                  // create a new SpeechSynthesisUtterance object
+      const utterance = new SpeechSynthesisUtterance();
+      utterance.lang = 'ja-JP';
+      utterance.text = button.textContent;
+            // speak the pronunciation
+      speechSynthesis.speak(utterance);
+    }
 
     // create a new div element for the popup
     const popup = document.createElement("div");
@@ -39,3 +44,5 @@ buttons.forEach(button => {
     }, 2000);
   });
 });
+
+
