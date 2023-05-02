@@ -17,7 +17,7 @@ let triggered = false;
 // add event listener to logo element
 logo.addEventListener("click", () => {
   const text = triggered ? "Moohidoi" : "Mouhidoi";
-  responsiveVoice.speak(text, "Japanese Female", { rate: 0.9, pitch: 1.5, volume: 1 });
+  responsiveVoice.speak(text, "Japanese Female", { rate: 0.9, pitch: 1.5 });
 });
 
 // loop through each button and add an event listener
@@ -43,7 +43,8 @@ buttons.forEach((button) => {
       }
     }
 
-    responsiveVoice.speak(text, "Japanese Female", { rate: rate, pitch: 1.5, volume: 10 });
+    responsiveVoice.speak(text, "Japanese Female", { rate: rate, pitch: 1.5 });
+
     // update the last clicked button
     lastButton = button;
 
@@ -88,4 +89,30 @@ buttons.forEach((button) => {
       }, 500);
     }, 2000);
   });
+});
+
+function showSupportPopup(supported) {
+  const supportPopup = document.createElement("div");
+  supportPopup.textContent = supported
+    ? "Your browser supports voice playback."
+    : "Your browser doesn't support voice playback. Voice clips will not play.";
+  supportPopup.style.position = "fixed";
+  supportPopup.style.left = "50%";
+  supportPopup.style.bottom = "0%";
+  supportPopup.style.transform = "translate(-50%, -50%)";
+  supportPopup.style.backgroundColor = supported ? "green" : "red";
+  supportPopup.style.color = "white";
+  supportPopup.style.padding = "20px";
+  supportPopup.style.borderRadius = "5px";
+  supportPopup.style.zIndex = "9999";
+  supportPopup.style.textAlign = "center";
+  document.body.appendChild(supportPopup);
+
+  setTimeout(() => {
+    supportPopup.remove();
+  }, 2500);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSupportPopup(responsiveVoice.voiceSupport());
 });
