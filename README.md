@@ -1,4 +1,4 @@
-<h1 align="center">🥃 Mohidoi</h1>
+<h1 align="center">🥃 [Mohidoi](https://mohidoi.com/)</h1>
 <p align="center">A ひどい Hiragana and Katakana learning site.</p>
 <p align="center">Simple and to the point web-based guide for learning and reviewing Hiragana and Katakana.</p>
 
