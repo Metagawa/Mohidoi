@@ -137,7 +137,7 @@ h3 { font-size: 1.15rem; margin: 1.6rem 0 .4rem; }
 
 /* ---------- now playing ---------- */
 .nowplaying {
-  position: fixed; left: 50%; top: calc(var(--sticky-top, 104px) + 10px); transform: translateX(-50%); z-index: 30;
+  position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 30;
   background: var(--ink); color: var(--bg); border-radius: 999px; padding: .5rem 1.1rem;
   font-size: .95rem; max-width: calc(100vw - 32px); white-space: nowrap; pointer-events: none; overflow: hidden; text-overflow: ellipsis;
 }
