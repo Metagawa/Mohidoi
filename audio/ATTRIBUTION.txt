@@ -1,0 +1,24 @@
+Audio attribution
+=================
+
+All recordings in this folder are by the Wikimedia Commons / Lingua Libre user Fukujinzuke
+(https://commons.wikimedia.org/wiki/User:Fukujinzuke), recorded with Lingua Libre (https://lingualibre.org/),
+licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Source files: "LL-Q5287 (jpn)-Fukujinzuke-<word>.wav" on commons.wikimedia.org.
+
+Kana clips (audio/<hiragana>.wav)
+  Files renamed to <hiragana>.wav; audio unchanged.
+  に uses the speaker's katakana ニ recording (same sound).
+
+Word clips (audio/words/<id>.ogg)
+  Every Japanese recording by Fukujinzuke on Commons (1,358 files, listed in October 2026).
+  Changes: converted from WAV to mono Opus (Ogg container, ~28 kbps, 48 kHz) with ffmpeg,
+  leading/trailing silence trimmed, metadata removed. <id> is the first 10 hex digits of the
+  SHA-1 of the Commons file name; data/words.js maps each id back to the recorded word, so the
+  original file is "LL-Q5287 (jpn)-Fukujinzuke-<word>.wav".
+
+Dictionary data (data/words.js)
+  Readings, meanings and parts of speech come from JMdict, (c) the Electronic Dictionary Research
+  and Development Group (EDRDG), https://www.edrdg.org/jmdict/j_jmdict.html, used under
+  CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/), via jmdict-simplified
+  (https://github.com/scriptin/jmdict-simplified). data/words.js is therefore also CC BY-SA 4.0.
