@@ -91,7 +91,7 @@ button { font: inherit; color: inherit; }
   .brand-tag { font-size: .8rem; }
 }
 
-.panel, .quiz { scroll-margin-top: calc(var(--sticky-top, 104px) + 8px); }
+.panel, .quiz { scroll-margin-top: calc(var(--sticky-top, 104px) + 16px); }
 main { padding-top: 1.25rem; padding-bottom: 2rem; min-height: 60vh; }
 .panel-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
 h2 { font-size: 1.6rem; margin: .25rem 0; }
@@ -139,7 +139,7 @@ h3 { font-size: 1.15rem; margin: 1.6rem 0 .4rem; }
 .nowplaying {
   position: fixed; left: 50%; top: calc(var(--sticky-top, 104px) + 10px); transform: translateX(-50%); z-index: 30;
   background: var(--ink); color: var(--bg); border-radius: 999px; padding: .5rem 1.1rem;
-  font-size: .95rem; max-width: calc(100vw - 32px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  font-size: .95rem; max-width: calc(100vw - 32px); white-space: nowrap; pointer-events: none; overflow: hidden; text-overflow: ellipsis;
 }
 .nowplaying .jp { font-size: 1.1rem; margin-right: .4rem; }
 
@@ -249,7 +249,7 @@ h3 { font-size: 1.15rem; margin: 1.6rem 0 .4rem; }
 #quiz-next { width: 100%; max-width: 640px; }
 
 .result { max-width: 640px; }
-.result-score { font-size: 2.2rem; font-weight: 700; margin: .5rem 0 0; }
+.result-score { font-size: 1.7rem; font-weight: 700; margin: .5rem 0 0; }
 .missed { padding-left: 1.2rem; }
 .missed li { margin: .25rem 0; }
 .result-actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1rem; }
@@ -268,4 +268,7 @@ h3 { font-size: 1.15rem; margin: 1.6rem 0 .4rem; }
   #kana-charts { columns: 2; column-gap: 3rem; }
   #kana-charts .chart { break-inside: avoid; }
   .tile { max-width: 76px; }
+}
+@media (min-width: 700px) {
+  .chips { flex-wrap: wrap; overflow: visible; }
 }

@@ -581,6 +581,7 @@
     $("#quiz-feedback").textContent = "";
     $("#quiz-next").hidden = true;
     if (s.i > 0) $("#quiz").scrollIntoView({ block: "start" });
+    stickyOffset();
   }
 
   function answer(btn) {
@@ -814,4 +815,5 @@
   stickyOffset();
   window.scrollTo(0, 0);
   window.addEventListener("resize", stickyOffset);
+  if ("ResizeObserver" in window) new ResizeObserver(stickyOffset).observe($(".masthead"));
 })();
