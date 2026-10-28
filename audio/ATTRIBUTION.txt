@@ -1,0 +1,4 @@
+Kana recordings: Japanese kana recordings by Fukujinzuke, via Lingua Libre / Wikimedia Commons,
+licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Source files: "LL-Q5287 (jpn)-Fukujinzuke-<kana>.wav" on commons.wikimedia.org.
+に uses the speaker's katakana ニ recording (same sound). Files renamed to <hiragana>.wav; audio unchanged.

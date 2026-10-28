@@ -1,3 +1,33 @@
+// Native recordings (Lingua Libre / Wikimedia Commons, speaker Fukujinzuke, CC BY 4.0) live in audio/<hiragana>.wav.
+// Anything without a recording (yoon, some dakuten, small tsu, long vowels) falls back to the browser's own Japanese voice.
+const RECORDED = new Set(["あ", "い", "う", "え", "お", "か", "が", "き", "く", "け", "こ", "ご", "さ", "し", "じ", "す", "せ", "そ", "ぞ", "た", "だ", "ち", "つ", "て", "で", "と", "ど", "な", "に", "ぬ", "ね", "の", "は", "ば", "ひ", "び", "ふ", "へ", "ほ", "ま", "み", "む", "め", "も", "や", "ゆ", "よ", "ら", "り", "る", "れ", "ろ", "わ", "を", "ん"]);
+
+const toHiragana = (s) =>
+  s.replace(/[\u30a1-\u30f6]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+
+function speakSynth(text, rate) {
+  if (!("speechSynthesis" in window)) return;
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "ja-JP";
+  u.rate = rate;
+  const ja = speechSynthesis.getVoices().find((v) => v.lang && v.lang.startsWith("ja"));
+  if (ja) u.voice = ja;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(u);
+}
+
+function speak(text, rate) {
+  const key = toHiragana(text);
+  if (RECORDED.has(key)) {
+    const clip = new Audio(`audio/${key}.wav`);
+    clip.preservesPitch = true;
+    clip.playbackRate = rate < 0.75 ? 0.6 : 1;
+    clip.play();
+  } else {
+    speakSynth(text, rate);
+  }
+}
+
 // get all anchor elements with the data-char attribute
 const buttons = document.querySelectorAll("a[data-char]");
 
@@ -17,7 +47,7 @@ let triggered = false;
 // add event listener to logo element
 logo.addEventListener("click", () => {
   const text = triggered ? "Moohidoi" : "Mouhidoi";
-  responsiveVoice.speak(text, "Japanese Female", { rate: 0.9, pitch: 1.5 });
+  speakSynth(text, 0.9);
 });
 
 // loop through each button and add an event listener
@@ -32,7 +62,7 @@ buttons.forEach((button) => {
       text = button.textContent.replace(" ", "");
     }
 
-    let rate = 0.75;
+    let rate = 1;
     if (lastButton && lastButton.dataset.char === button.dataset.char) {
       if (triggered) {
         rate = 1;
@@ -43,7 +73,7 @@ buttons.forEach((button) => {
       }
     }
 
-    responsiveVoice.speak(text, "Japanese Female", { rate: rate, pitch: 1.5 });
+    speak(text, rate);
 
     // update the last clicked button
     lastButton = button;
@@ -114,5 +144,5 @@ function showSupportPopup(supported) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  showSupportPopup(responsiveVoice.voiceSupport());
+  showSupportPopup("speechSynthesis" in window || typeof Audio !== "undefined");
 });
